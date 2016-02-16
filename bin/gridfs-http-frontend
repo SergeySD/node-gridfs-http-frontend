@@ -6,7 +6,7 @@ var DEFAULT_LISTEN_PORT     = '3000';
 var path = require('path'),
     fs   = require('fs'),
     lib  = path.join(path.dirname(fs.realpathSync(__filename)), '../lib'),
-    argv = require('optimist').argv,
+    argv = require('minimist')(process.argv.slice(2)),
     commands = require(path.join(lib,'commands'));
 
 try {
